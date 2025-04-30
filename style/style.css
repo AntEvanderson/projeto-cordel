@@ -1,0 +1,103 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Cordel Nordestino';
+    src: url('../fontes/CordelEncarnado-Bold.ttf') format('opentype');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
+:root{
+    --fonte1: Arial, Verdana, sans-serif;
+    --fonte2: "Sacramento", cursive;
+    --fonte3: 'Cordel Nordestino', Arial;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body{
+    min-height: 100vh; /*Tamanho mínimo do corpo do HTML, viewport: 100% da altura do corpo*/
+    background-color: rgba(169, 169, 169, 0.199);
+    font-family: var(--fonte1);
+}
+
+header{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+header>h1{
+    padding-top: 50px; /*padding acima*/
+    /*text-transform: uppercase; Transformar tudo em letra maiúscula*/
+    font-variant: small-caps;/*Deixa todas as letras maiusculas, Mas as iniciais são maiores*/
+    font-family: var(--fonte3);
+    font-size: 10vw;
+    text-shadow: 1px 1px 1px rgba(218, 165, 32, 0.726);
+}
+
+header>p{
+    padding-bottom: 50px; /*padding abaixo*/
+}
+
+header a, footer a{
+    color: whitesmoke;
+    text-decoration: none; /*Tira o Underline da palavra*/
+    font-weight: bolder; /*Deixa a fonte em negrito*/
+}
+
+header a:hover, footer a:hover{
+    text-decoration: underline; /*Ao passar o mouse aparece o Underline*/
+}
+
+section{
+    padding-top: 10vh; /*padding acima, 10% da altura da tela*/
+    padding-bottom: 10vh;/*padding abaixo, 10% da altura tela*/
+    line-height: 2em;/*Espaçamento entre as frases*/
+    padding-left: 30px;/*Afastar mais ao centro*/
+    font-family: var(--fonte2);
+    font-size: 3.5vw;
+}
+
+section>p{
+    padding-bottom: 2em;
+}
+
+section.normal{
+    background-color: white;
+    color: black;
+}
+
+section.imagem{
+    background-color: rgba(44, 44, 44, 0.377);
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px black;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section.imagem>p{
+    display: inline-block; /*A caixa se adapta ao tamanho do conteúdo*/
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.349); /*Cria uma caixa dentro do parágrafo*/
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.473);
+}
+
+section#img01{
+    background-image: url('../imagens/background001.jpg');
+    background-position: right center; /*Alinhar a imagem a direita*/ 
+}
+
+section#img02{
+    background-image: url('../imagens/background002.jpg'); 
+}
+
+footer{
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
